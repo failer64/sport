@@ -5,7 +5,11 @@
 	<title>Home</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
@@ -26,13 +30,13 @@
 								<li class="content-main__item">Get the approval of like-minded people!</li>
 								<li class="content-main__item">See other people's successes and get motivated!</li>
 							</ul>
-							<div data-da=".main__body,910" class="content-main__socials main-socials">
-								<a href="" class="main-socials__item">
+							<div data-da=".main__body, 910" class="content-main__socials main-socials">
+								<button data-popup="#form-google" type="button" class="main-socials__item">
 									<img src="img/google-play.png" alt="Google play">
-								</a>
-								<a href="" class="main-socials__item">
+								</button>
+								<button data-popup="#form-apple" type="button" class="main-socials__item">
 									<img src="img/apple-store.png" alt="Apple Store">
-								</a>
+								</button>
 							</div>
 						</div>
 						<div class="main__mobi mobi-main">
@@ -97,6 +101,76 @@
 				</div>
 			</section>
 		</main>
+	</div>
+	<div id="form-google" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<a target="_blank" href="" class="popup__image">
+					<img src="img/google-play.png" alt="Google play">
+				</a>
+				<div class="popup__title">Leave your email for registration</div>
+				<form data-dev data-popup-message="#success" method="post" action="#" class="popup__form form">
+					<div class="form__item">
+						<input data-required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="What is your name?" class="input">
+					</div>
+					<div class="form__item">
+						<input data-required="email" data-validate autocomplete="off" type="text" name="form[]" data-error="bad mail" placeholder="Your mail" class="input">
+					</div>
+					<div class="form__item">
+						<select data-required name="form[]" class="form__select">
+							<option value="">What is the goal?</option>
+							<option value="1">Lose weight</option>
+							<option value="2">To gain weight</option>
+							<option value="3">Slenderness</option>
+						</select>
+					</div>
+					<div class="form__item">
+						<button type="submit" class="form__button"><span>Ok</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="form-apple" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<a target="_blank" href="" class="popup__image">
+					<img src="img/apple-store.png" alt="Apple store">
+				</a>
+				<div class="popup__title">Leave your email for registration</div>
+				<form data-dev data-popup-message="#success" method="post" action="#" class="popup__form form">
+					<div class="form__item">
+						<input data-required autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="What is your name?" class="input">
+					</div>
+					<div class="form__item">
+						<input data-required="email" data-validate autocomplete="off" type="text" name="form[]" data-error="bad mail" placeholder="Your mail" class="input">
+					</div>
+					<div class="form__item">
+						<select data-required name="form[]" class="form__select">
+							<option value="">What is the goal?</option>
+							<option value="1">Lose weight</option>
+							<option value="2">To gain weight</option>
+							<option value="3">Slenderness</option>
+						</select>
+					</div>
+					<div class="form__item">
+						<button type="submit" class="form__button"><span>Ok</span></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="success" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__title">The form has been sent!</div>
+			</div>
+		</div>
 	</div>
 	<script src="js/app.min.js"></script>
 </body>
